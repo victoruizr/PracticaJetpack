@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/principal">
+
+    <fragment
+        android:id="@+id/principal"
+        android:name="com.example.practicajetpack.Principal"
+        android:label="fragment_principal"
+        tools:layout="@layout/fragment_principal" >
+        <action
+            android:id="@+id/action_principal_to_navegador"
+            app:destination="@id/navegador" />
+        <action
+            android:id="@+id/action_principal_to_camara"
+            app:destination="@id/camara" />
+        <action
+            android:id="@+id/action_principal_to_operaciones"
+            app:destination="@id/operaciones" />
+    </fragment>
+    <fragment
+        android:id="@+id/suma"
+        android:name="com.example.practicajetpack.Suma"
+        android:label="fragment_suma"
+        tools:layout="@layout/fragment_suma" >
+        <argument
+            android:name="resultado"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/resta"
+        android:name="com.example.practicajetpack.Resta"
+        android:label="fragment_resta"
+        tools:layout="@layout/fragment_resta" >
+        <argument
+            android:name="resultado"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/multplicacion"
+        android:name="com.example.practicajetpack.Multplicacion"
+        android:label="fragment_multplicacion"
+        tools:layout="@layout/fragment_multplicacion" >
+        <argument
+            android:name="resultado"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/division"
+        android:name="com.example.practicajetpack.Division"
+        android:label="fragment_division"
+        tools:layout="@layout/fragment_division" >
+        <argument
+            android:name="resultado"
+            app:argType="float" />
+    </fragment>
+    <fragment
+        android:id="@+id/operaciones"
+        android:name="com.example.practicajetpack.Operaciones"
+        android:label="fragment_operaciones"
+        tools:layout="@layout/fragment_operaciones" >
+        <action
+            android:id="@+id/action_operaciones_to_suma"
+            app:destination="@id/suma" />
+        <action
+            android:id="@+id/action_operaciones_to_resta"
+            app:destination="@id/resta" />
+        <action
+            android:id="@+id/action_operaciones_to_multplicacion"
+            app:destination="@id/multplicacion" />
+        <action
+            android:id="@+id/action_operaciones_to_division"
+            app:destination="@id/division" />
+    </fragment>
+    <fragment
+        android:id="@+id/camara"
+        android:name="com.example.practicajetpack.Camara"
+        android:label="fragment_camara"
+        tools:layout="@layout/fragment_camara" />
+    <fragment
+        android:id="@+id/navegador"
+        android:name="com.example.practicajetpack.navegador"
+        android:label="fragment_navegador"
+        tools:layout="@layout/fragment_navegador" >
+        <action
+            android:id="@+id/action_navegador_to_principal"
+            app:destination="@id/principal" />
+    </fragment>
+</navigation>

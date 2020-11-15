@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".navegador">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Menú principal"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/bNavegador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Navegador" />
+
+    <Button
+        android:id="@+id/bCamara"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Camara" />
+
+    <Button
+        android:id="@+id/bCalcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcular" />
+</LinearLayout>
